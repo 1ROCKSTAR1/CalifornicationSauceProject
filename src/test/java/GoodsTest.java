@@ -1,3 +1,4 @@
+import model.base.BaseTest;
 import org.testng.annotations.Test;
 
 public class GoodsTest extends BaseTest {
