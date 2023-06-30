@@ -1,5 +1,7 @@
+package Test;
+
 import model.LoginPage;
-import model.base.BaseTest;
+import base.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,7 +11,6 @@ import org.testng.annotations.Test;
 public class LoginPageTest extends BaseTest {
 
     String AfterLoginHeader = "Swag Labs";
-
 
     @Test
     public void enterTest() {
@@ -37,8 +38,6 @@ public class LoginPageTest extends BaseTest {
         loginPage.inputPassword("secret_sauce");
         loginPage.clickSubmit();
 
-        String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
-
-        Assert.assertEquals(afterLoginHeaderString,AfterLoginHeader);
+        Assert.assertEquals(loginPage.afterLoginHeaderString,AfterLoginHeader);
     }
 }

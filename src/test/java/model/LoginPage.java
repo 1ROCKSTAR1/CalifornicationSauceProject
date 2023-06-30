@@ -1,9 +1,8 @@
 package model;
 
-import model.base.BasicModel;
+import base.BasicModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasicModel {
@@ -19,4 +18,5 @@ public class LoginPage extends BasicModel {
     public void clickSubmit() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login-button']"))).click();
     }
+    public final String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 }
