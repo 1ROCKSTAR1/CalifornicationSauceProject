@@ -1,3 +1,6 @@
+package base;
+
+import model.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,6 +12,7 @@ import java.time.Duration;
 
 public abstract class BaseTest {
     private WebDriverWait wait2;
+    private WebDriverWait wait5;
     private WebDriver driver;
     private static final String BASE_URL = "https://www.saucedemo.com/";
     @BeforeMethod
@@ -33,5 +37,11 @@ public abstract class BaseTest {
             wait2 = new WebDriverWait(getDriver(), Duration.ofSeconds(2));
         }
         return wait2;
+    }
+    protected WebDriverWait getWait5() {
+        if (wait5 == null) {
+            wait5 = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+        }
+        return wait5;
     }
 }
