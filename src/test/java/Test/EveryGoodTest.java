@@ -55,7 +55,7 @@ public class EveryGoodTest extends BaseTest {
 
         BoltShirtPage boltShirtPage = new BoltShirtPage(getDriver());
 
-        Assert.assertEquals(goodsPage.bikeLightItem, "Sauce Labs Bolt T-Shirt");
+        Assert.assertEquals(goodsPage.boltShirtItem, "Sauce Labs Bolt T-Shirt");
         Assert.assertEquals(boltShirtPage.boltShirtDesc, "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.");
     }
 
@@ -85,7 +85,7 @@ public class EveryGoodTest extends BaseTest {
         loginPage.clickSubmit();
 
         GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnWhireShirt();
+        goodsPage.clickOnWhiteShirt();
 
         WhiteShirtPage whiteShirtPage = new WhiteShirtPage(getDriver());
 

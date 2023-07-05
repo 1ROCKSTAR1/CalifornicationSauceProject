@@ -9,8 +9,8 @@ public class BikeLightPage extends BasicModel {
     public BikeLightPage(WebDriver driver) {
         super(driver);
     }
-    public final String bikeLightItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size"))).getText();
-    public final String bikeLightDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='inventory_details_desc large_size']"))).getText();
+    public final String bikeLightItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_name large_size')][contains(text(),'Sauce Labs Bike Light')]"))).getText();
+    public final String bikeLightDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_desc large_size')][contains(text(),'when riding your bike at night')]"))).getText();
 
 
 

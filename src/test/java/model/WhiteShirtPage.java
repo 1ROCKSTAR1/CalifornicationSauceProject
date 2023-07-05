@@ -9,6 +9,6 @@ public class WhiteShirtPage extends BasicModel {
     public WhiteShirtPage(WebDriver driver) {
         super(driver);
     }
-    public final String whiteShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size"))).getText();
-    public final String whiteShirtDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_desc.large_size"))).getText();
+    public final String whiteShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_name large_size')][contains(text(),'Sauce Labs Onesie')]"))).getText();
+    public final String whiteShirtDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_desc large_size')][contains(text(),'Rib snap infant onesie for the junior automation engineer')]"))).getText();
 }

@@ -9,6 +9,6 @@ public class FleeceJacketPage extends BasicModel {
     public FleeceJacketPage(WebDriver driver) {
         super(driver);
     }
-    public final String fleeceJacketItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size"))).getText();
-    public final String fleeceJacketDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='inventory_details_desc large_size']"))).getText();
+    public final String fleeceJacketItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_name large_size')][contains(text(),'Sauce Labs Fleece Jacket')]"))).getText();
+    public final String fleeceJacketDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_desc large_size')][contains(text(),'relaxing day outdoors')]"))).getText();
 }
