@@ -3,6 +3,7 @@ package model;
 import base.BasicModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GoodsPage extends BasicModel {
@@ -55,4 +56,10 @@ public class GoodsPage extends BasicModel {
     public void addToCardHoodyButton() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@data-test,'red')]"))).click();
     }
+    public WebElement backPackRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-backpack']")));
+    public WebElement bikeLightRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-bike-light']")));
+    public WebElement boltShirtRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-bolt-t-shirt']")));
+    public WebElement fleeceJacketRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-fleece-jacket']")));
+    public WebElement whiteShirtRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-onesie']")));
+    public WebElement hoodyRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@data-test,'red')][contains(text(),'Remove')]")));
 }
