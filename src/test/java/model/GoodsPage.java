@@ -62,4 +62,5 @@ public class GoodsPage extends BasicModel {
     public WebElement fleeceJacketRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-fleece-jacket']")));
     public WebElement whiteShirtRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-onesie']")));
     public WebElement hoodyRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@data-test,'red')][contains(text(),'Remove')]")));
+    public WebElement cartIcon = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='shopping_cart_link']")));
 }
