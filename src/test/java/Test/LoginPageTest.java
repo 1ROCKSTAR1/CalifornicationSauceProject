@@ -16,7 +16,7 @@ public class LoginPageTest extends BaseTest {
     @Test
     public void enterTest() {
 
-        WebElement loginField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='user-name']")));
+    WebElement loginField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='user-name']")));
     WebElement passField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
     WebElement submitButton = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login-button']")));
 
@@ -24,9 +24,9 @@ public class LoginPageTest extends BaseTest {
     passField.sendKeys("secret_sauce");
     submitButton.click();
 
-        String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
+    String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 
-        Assert.assertEquals(afterLoginHeaderString,AfterLoginHeader);
+    Assert.assertEquals(afterLoginHeaderString,AfterLoginHeader);
     }
 
     @Test // ИСП. PAGE OBJECT
