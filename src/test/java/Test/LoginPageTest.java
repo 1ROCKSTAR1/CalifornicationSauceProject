@@ -1,5 +1,6 @@
 package Test;
 
+import model.GoodsPage;
 import model.LoginPage;
 import base.BaseTest;
 import org.openqa.selenium.By;
@@ -38,6 +39,7 @@ public class LoginPageTest extends BaseTest {
         loginPage.inputPassword("secret_sauce");
         loginPage.clickSubmit();
 
-        Assert.assertEquals(loginPage.afterLoginHeaderString,AfterLoginHeader);
+        GoodsPage goodsPage = new GoodsPage(getDriver());
+        Assert.assertEquals(goodsPage.afterLoginHeaderString,AfterLoginHeader);
     }
 }

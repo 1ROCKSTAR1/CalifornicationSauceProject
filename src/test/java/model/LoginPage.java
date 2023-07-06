@@ -18,5 +18,4 @@ public class LoginPage extends BasicModel {
     public void clickSubmit() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login-button']"))).click();
     }
-    public final String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 }

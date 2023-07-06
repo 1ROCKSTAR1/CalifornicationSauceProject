@@ -9,5 +9,6 @@ public class BoltShirtPage extends BasicModel {
     public BoltShirtPage(WebDriver driver) {
         super(driver);
     }
-    public final String boltShirtDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='inventory_details_desc large_size']"))).getText();
+    public final String boltShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_name large_size')][contains(text(),'Sauce Labs Bolt T-Shirt')]"))).getText();
+    public final String boltShirtDesc = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_details_desc large_size')][contains(text(),'Get your testing superhero')]"))).getText();
 }
