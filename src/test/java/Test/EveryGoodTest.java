@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class EveryGoodTest extends BaseTest {
-
+    // ДАННЫЕ ТЕСТЫ ПРВОЕРЯЮТ СУЩЕСТВОВАНИЕ УНИКАЛЬНОЙ ТОВАРУ СТРАНИЦЫ А ТАК ЖЕ ПАРВИЛЬНОСТЬ ЗАГОЛОВКА И ОПИСАНИЯ
     @Test
     public void bikeLightPageTextTest() {
 

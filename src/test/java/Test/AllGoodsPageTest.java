@@ -5,7 +5,7 @@ import model.GoodsPage;
 import model.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+// ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ НАЛИЧИЕ КАЖДОГО ТОВАРА НА СТРАНИЦЕ И КОРРЕКТНОСТЬ ЗАГОЛОВКА ТОВАРА
 public class AllGoodsPageTest extends BaseTest {
 
     @Test

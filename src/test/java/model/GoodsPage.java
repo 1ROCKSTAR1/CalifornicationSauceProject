@@ -38,29 +38,22 @@ public class GoodsPage extends BasicModel {
     public final String hoodyItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).getText();
     public final String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 
-    public void addToCardBackPackButton() {
+    public void addToCardBackPackButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-backpack']"))).click();
     }
-    public void addToCardBikeLightButton() {
+    public void addToCardBikeLightButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-bike-light']"))).click();
     }
-    public void addToCardBoltShirtButton() {
+    public void addToCardBoltShirtButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-bolt-t-shirt']"))).click();
     }
-    public void addToCardFleeceJacketButton() {
+    public void addToCardFleeceJacketButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-fleece-jacket']"))).click();
     }
-    public void addToCardWhiteShirtButton() {
+    public void addToCardWhiteShirtButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-onesie']"))).click();
     }
-    public void addToCardHoodyButton() {
+    public void addToCardHoodyButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@data-test,'red')]"))).click();
     }
-    public WebElement backPackRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-backpack']")));
-    public WebElement bikeLightRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-bike-light']")));
-    public WebElement boltShirtRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-bolt-t-shirt']")));
-    public WebElement fleeceJacketRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-fleece-jacket']")));
-    public WebElement whiteShirtRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-test='remove-sauce-labs-onesie']")));
-    public WebElement hoodyRemoveButton = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@data-test,'red')][contains(text(),'Remove')]")));
-    public WebElement cartIcon = getWait2().until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='shopping_cart_link']")));
 }
