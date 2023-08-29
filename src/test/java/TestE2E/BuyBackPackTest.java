@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 public class BuyBackPackTest extends BaseTest {
     @Test
     public void buyBackPack() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -39,6 +40,5 @@ public class BuyBackPackTest extends BaseTest {
 
         CompletePage completePage = new CompletePage(getDriver());
         Assert.assertEquals(completePage.finishBuyHeader,"Thank you for your order!");
-
     }
 }

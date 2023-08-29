@@ -44,6 +44,7 @@ public class EveryGoodTest extends BaseTest {
 
     @Test
     public void boltShirtPageTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -61,6 +62,7 @@ public class EveryGoodTest extends BaseTest {
 
     @Test
     public void fleeceJacketPageTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -78,6 +80,7 @@ public class EveryGoodTest extends BaseTest {
 
     @Test
     public void whiteShirtPageTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -95,6 +98,7 @@ public class EveryGoodTest extends BaseTest {
 
     @Test
     public void hoodyPageTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");

@@ -10,6 +10,7 @@ public class AllGoodsPageTest extends BaseTest {
 
     @Test
     public void bikeLightHeaderTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -23,6 +24,7 @@ public class AllGoodsPageTest extends BaseTest {
 
     @Test
     public void backPackHeaderTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -36,6 +38,7 @@ public class AllGoodsPageTest extends BaseTest {
 
     @Test
     public void boltTshirtHeaderTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -49,6 +52,7 @@ public class AllGoodsPageTest extends BaseTest {
 
     @Test
     public void fleeceJacketHeaderTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -62,6 +66,7 @@ public class AllGoodsPageTest extends BaseTest {
 
     @Test
     public void whiteShirtHeaderTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
@@ -75,6 +80,7 @@ public class AllGoodsPageTest extends BaseTest {
 
     @Test
     public void hoodyHeaderTextTest() {
+
         LoginPage loginPage = new LoginPage(getDriver());
 
         loginPage.inputLogin("standard_user");
