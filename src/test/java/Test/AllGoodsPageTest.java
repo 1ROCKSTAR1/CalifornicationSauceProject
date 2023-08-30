@@ -1,8 +1,8 @@
 package Test;
 
-import base.BaseTest;
-import model.GoodsPage;
-import model.LoginPage;
+import Base.BaseTest;
+import Page.GoodsPage;
+import Page.AutorizationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 // ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ НАЛИЧИЕ КАЖДОГО ТОВАРА НА СТРАНИЦЕ И КОРРЕКТНОСТЬ ЗАГОЛОВКА ТОВАРА
@@ -11,7 +11,7 @@ public class AllGoodsPageTest extends BaseTest {
     @Test
     public void bikeLightHeaderTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -25,7 +25,7 @@ public class AllGoodsPageTest extends BaseTest {
     @Test
     public void backPackHeaderTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -39,7 +39,7 @@ public class AllGoodsPageTest extends BaseTest {
     @Test
     public void boltTshirtHeaderTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -53,7 +53,7 @@ public class AllGoodsPageTest extends BaseTest {
     @Test
     public void fleeceJacketHeaderTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -67,7 +67,7 @@ public class AllGoodsPageTest extends BaseTest {
     @Test
     public void whiteShirtHeaderTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -81,7 +81,7 @@ public class AllGoodsPageTest extends BaseTest {
     @Test
     public void hoodyHeaderTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");

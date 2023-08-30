@@ -1,8 +1,8 @@
 package Test;
 
-import model.GoodsPage;
-import model.LoginPage;
-import base.BaseTest;
+import Page.GoodsPage;
+import Page.AutorizationPage;
+import Base.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,7 +33,7 @@ public class LoginPageTest extends BaseTest {
     public void enter2Test() {
 
         final String AfterLoginHeader = "Swag Labs";
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");

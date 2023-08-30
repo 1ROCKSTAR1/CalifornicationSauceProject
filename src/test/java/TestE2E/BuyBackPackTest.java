@@ -1,7 +1,7 @@
 package TestE2E;
 
-import base.BaseTest;
-import model.*;
+import Base.BaseTest;
+import Page.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +9,7 @@ public class BuyBackPackTest extends BaseTest {
     @Test
     public void buyBackPack() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");

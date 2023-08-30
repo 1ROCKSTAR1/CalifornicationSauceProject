@@ -1,7 +1,7 @@
 package Test;
 
-import model.*;
-import base.BaseTest;
+import Page.*;
+import Base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +10,7 @@ public class EveryGoodTest extends BaseTest {
     @Test
     public void bikeLightPageTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -27,7 +27,7 @@ public class EveryGoodTest extends BaseTest {
 
     @Test
     public void backPackPageTextTest() {
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -45,7 +45,7 @@ public class EveryGoodTest extends BaseTest {
     @Test
     public void boltShirtPageTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -63,7 +63,7 @@ public class EveryGoodTest extends BaseTest {
     @Test
     public void fleeceJacketPageTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -81,7 +81,7 @@ public class EveryGoodTest extends BaseTest {
     @Test
     public void whiteShirtPageTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
@@ -99,7 +99,7 @@ public class EveryGoodTest extends BaseTest {
     @Test
     public void hoodyPageTextTest() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
+        AutorizationPage loginPage = new AutorizationPage(getDriver());
 
         loginPage.inputLogin("standard_user");
         loginPage.inputPassword("secret_sauce");
