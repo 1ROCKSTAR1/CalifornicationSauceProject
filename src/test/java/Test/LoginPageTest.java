@@ -3,6 +3,7 @@ package Test;
 import Page.GoodsPage;
 import Page.AutorizationPage;
 import Base.BaseTest;
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +14,11 @@ public class LoginPageTest extends BaseTest {
 
     String AfterLoginHeader = "Swag Labs";
 
-    @Test
+    @Epic(value = "Basic checking")
+    @Feature(value = "Autorization")
+    @Severity(value = SeverityLevel.NORMAL)
+    @Description("Checks a basic autorization without PageObject.")
+    @Test(priority = 1, description = "Checking a basic autorization without POM.")
     public void enterTest() {
 
     WebElement loginField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='user-name']")));
@@ -29,7 +34,11 @@ public class LoginPageTest extends BaseTest {
     Assert.assertEquals(afterLoginHeaderString,AfterLoginHeader);
     }
 
-    @Test // ИСП. PAGE OBJECT
+    @Epic(value = "Basic checking")
+    @Feature(value = "Autorization")
+    @Severity(value = SeverityLevel.NORMAL)
+    @Description("Checks a basic autorization with PageObject model")
+    @Test(priority = 1, description = "Checking a basic autorization with POM.")
     public void enter2Test() {
 
         final String AfterLoginHeader = "Swag Labs";
