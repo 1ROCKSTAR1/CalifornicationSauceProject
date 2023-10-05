@@ -14,7 +14,7 @@ public abstract class BaseTest {
     private WebDriverWait wait5;
     private WebDriver driver;
     private static final String BASE_URL = "https://www.saucedemo.com/";
-    @BeforeMethod
+    @BeforeMethod(description = "Browser startUp")
     protected void beforeMethod() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*", /*"--headless",*/ "--window-size=1920,1080");
@@ -23,7 +23,7 @@ public abstract class BaseTest {
         getDriver().get(BASE_URL);
     }
 
-    @AfterMethod
+    @AfterMethod(description = "Browser tearDown")
     protected void afterMethod() {
         driver.quit();
     }
