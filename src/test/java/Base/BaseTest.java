@@ -17,10 +17,10 @@ public abstract class BaseTest {
     private WebDriver driver;
     private static final String BASE_URL = "https://www.saucedemo.com/";
 
-//    @BeforeSuite(description = "Driver setUp")
-//    public static void setupAll() {
-//        WebDriverManager.chromedriver().setup();
-//    }
+    @BeforeSuite(description = "Driver setUp")
+    public static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     @BeforeMethod(description = "Browser startUp")
     protected void beforeMethod() {
