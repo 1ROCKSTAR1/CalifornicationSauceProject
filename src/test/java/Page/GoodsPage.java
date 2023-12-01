@@ -3,6 +3,7 @@ package Page;
 import Base.BasicModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GoodsPage extends BasicModel {
@@ -35,7 +36,12 @@ public class GoodsPage extends BasicModel {
     public final String fleeceJacketItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]"))).getText();
     public final String whiteShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]"))).getText();
     public final String hoodyItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).getText();
-    public final String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
+
+    public final WebElement afterLoginHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']")));
+    public String getAfterLoginHeaderString() {
+
+        return afterLoginHeader.getText();
+    }
 
     public void addToCardBackPackButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-backpack']"))).click();

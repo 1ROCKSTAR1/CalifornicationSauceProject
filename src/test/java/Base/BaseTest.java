@@ -1,6 +1,5 @@
 package Base;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,25 +16,19 @@ public abstract class BaseTest {
     private WebDriver driver;
     private static final String BASE_URL = "https://www.saucedemo.com/";
 
-    @BeforeSuite(description = "Driver setUp")
-    public static void setupAll() {
-        WebDriverManager.chromedriver().setup();
-    }
-
     @BeforeMethod(description = "Browser startUp")
     protected void beforeMethod() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*", "--headless", "--window-size=1920,1080");
+        chromeOptions.addArguments("--remote-allow-origins=*", /*"--headless",*/ "--window-size=1920,1080");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         getDriver().get(BASE_URL);
     }
 
-    @AfterMethod(description = "Browser tearDown")
+    @AfterMethod (description = "Browser tearDown")
     protected void afterMethod() {
         driver.quit();
     }
-
     protected WebDriver getDriver() {
         return driver;
     }

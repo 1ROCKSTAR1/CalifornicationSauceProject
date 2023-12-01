@@ -16,8 +16,8 @@ public class BuyBackPackTest extends BaseTest {
 
         Allure.step("Autorization");
         AutorizationPage loginPage = new AutorizationPage(getDriver());
-        loginPage.inputLogin("standard_user");
-        loginPage.inputPassword("secret_sauce");
+        loginPage.inputLogin();
+        loginPage.inputPassword();
         loginPage.clickSubmit();
 
         Allure.step("Go to the Product's page");
@@ -31,7 +31,7 @@ public class BuyBackPackTest extends BaseTest {
 
         Allure.step("Go to the cart");
         YourCartPage yourCartPage = new YourCartPage(getDriver());
-        yourCartPage.chekoutButton.click();
+        yourCartPage.checkoutButton.click();
 
         Allure.step("Go the the buyer's info page + filling the fields");
         BuyInformationPage buyInformationPage = new BuyInformationPage(getDriver());
@@ -62,8 +62,8 @@ public class BuyBackPackTest extends BaseTest {
 
         Allure.step("Autorization");
         AutorizationPage loginPage = new AutorizationPage(getDriver());
-        loginPage.inputLogin("standard_user");
-        loginPage.inputPassword("secret_sauce");
+        loginPage.inputLogin();
+        loginPage.inputPassword();
         loginPage.clickSubmit();
 
         Allure.step("Go to the Product's page");
@@ -77,7 +77,7 @@ public class BuyBackPackTest extends BaseTest {
 
         Allure.step("Go to the cart");
         YourCartPage yourCartPage = new YourCartPage(getDriver());
-        yourCartPage.chekoutButton.click();
+        yourCartPage.checkoutButton.click();
 
         Allure.step("Go the the buyer's info page + filling the fields");
         BuyInformationPage buyInformationPage = new BuyInformationPage(getDriver());
