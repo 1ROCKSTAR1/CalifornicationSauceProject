@@ -18,7 +18,7 @@ public abstract class BaseTest {
     @BeforeMethod(description = "Browser startUp")
     protected void beforeMethod() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*", /*"--headless",*/ "--window-size=1920,1080");
+        chromeOptions.addArguments("--remote-allow-origins=*", "--headless", "--window-size=1920,1080");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         getDriver().get(BASE_URL);
