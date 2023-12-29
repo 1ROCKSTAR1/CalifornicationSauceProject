@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="Base.TestListener"/>
+    </listeners>
+        <test name="MainPageGoodsTests">
+<classes>
+            <class name="Test.AllGoodsPageTest">
+                <methods>
+                    <include name="bikeLightHeaderTextTest"/>
+                    <include name="backPackHeaderTextTest"/>
+                    <include name="boltTshirtHeaderTextTest"/>
+                    <include name="fleeceJacketHeaderTextTest"/>
+                    <include name="whiteShirtHeaderTextTest"/>
+                    <include name="hoodyHeaderTextTest"/>
+                </methods>
+            </class>
+</classes>
+</test>
+
+    <test name="MainPageEveryGoodTests">
+        <classes>
+            <class name="Test.EveryGoodTest">
+                <methods>
+                    <include name="bikeLightPageTextTest"/>
+                    <include name="backPackPageTextTest"/>
+                    <include name="boltShirtPageTextTest"/>
+                    <include name="fleeceJacketPageTextTest"/>
+                    <include name="whiteShirtPageTextTest"/>
+                    <include name="hoodyPageTextTest"/>
+                </methods>
+            </class>
+            </classes>
+    </test>
+
+    <test name="DataProviderTests">
+        <classes>
+            <class name="Test.ExperimenthalTest">
+                <methods>
+                    <include name="theFirstDataProviderTest"/>
+                    <include name="theFirstDataProviderTest2"/>
+                    <include name="theFirstDataProviderTest3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="LoginTests">
+        <classes>
+            <class name="Test.LoginPageTest">
+                <methods>
+                    <include name="enterTest"/>
+                    <include name="enter2Test"/>
+                    <include name="autorize2Test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="E2E">
+        <classes>
+            <class name="TestE2E.BuyBackPackTest">
+                <methods>
+                    <include name="buyBackPack"/>
+                    <include name="buyBackPack2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
