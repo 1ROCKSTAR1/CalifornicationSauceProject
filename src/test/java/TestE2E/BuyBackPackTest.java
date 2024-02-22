@@ -98,4 +98,50 @@ public class BuyBackPackTest extends BaseTest {
         CompletePage completePage = new CompletePage(getDriver());
         Assert.assertEquals(completePage.finishBuyHeader,"Thank you for order!");
     }
+
+    @Epic(value = "E2E tests")
+    @Feature(value = "Buying an item")
+    @Severity(value = SeverityLevel.NORMAL)
+    @Description("Buying an item. From an autorization to an order. NEGATIVE.")
+    @Test(priority = 1, description = "Checking of creating an order. CHAINS")
+    public void buyBackPack3() {
+
+        Allure.step("Autorization");
+        new AutorizationPage(getDriver())
+        .inputLogin()
+        .inputPassword()
+        .clickSubmit();
+
+        Allure.step("Go to the Product's page");
+        new GoodsPage(getDriver())
+        .clickOnBackPack();
+
+        Allure.step("Go to the Backpack's page");
+        new BackPackPage(getDriver())
+        .addBackPackToCart()
+        .backPackCartIcon();
+
+        Allure.step("Go to the cart");
+        new YourCartPage(getDriver())
+        .checkoutButton();
+
+        Allure.step("Go the the buyer's info page + filling the fields");
+        new BuyInformationPage(getDriver())
+        .fillThefirstNameField()
+        .fillThelastNameField()
+        .fillThepostCodeField()
+        .clickOnsumbitButton();
+
+        Allure.step("Go to \"Overview page\" + some fields check");
+        new OverviewPage(getDriver())
+                .checkoutTitle()
+                .checkPaymentInfo()
+                .checkShipInfo()
+                .CheckPrice()
+                .finishButtonClick();
+
+        Allure.step("Go the the Complete page");
+        new CompletePage(getDriver())
+                .finishBuyHeaderCheck();
+    }
 }

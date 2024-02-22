@@ -61,4 +61,5 @@ public class GoodsPage extends BasicModel {
     public void addToCardHoodyButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@data-test,'red')]"))).click();
     }
+
 }

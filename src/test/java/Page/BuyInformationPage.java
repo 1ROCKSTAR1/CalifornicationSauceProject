@@ -18,4 +18,23 @@ public class BuyInformationPage extends BasicModel {
 
 
     public WebElement sumbitButton = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='submit']")));
+
+    public BuyInformationPage fillThefirstNameField() {
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='First Name']"))).sendKeys("Tom");
+        return this;
+    }
+    public BuyInformationPage fillThelastNameField() {
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Last Name']"))).sendKeys("Harris");
+        return this;
+    }
+    public BuyInformationPage fillThepostCodeField() {
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Zip/Postal Code']"))).sendKeys("000");
+        return this;
+    }
+
+
+    public BuyInformationPage clickOnsumbitButton() {
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='submit']"))).click();
+        return this;
+    }
 }

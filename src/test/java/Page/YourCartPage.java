@@ -10,6 +10,10 @@ public class YourCartPage extends BasicModel {
     public YourCartPage(WebDriver driver) {
         super(driver);
     }
-    public WebElement checkoutButton = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='checkout']")));
 
+    public WebElement checkoutButton = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='checkout']")));
+    public YourCartPage checkoutButton (){
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='checkout']"))).click();
+        return this;
+    }
 }
