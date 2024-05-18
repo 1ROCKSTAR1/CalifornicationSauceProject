@@ -1,6 +1,7 @@
 package Page;
 
 import Base.BasicModel;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -45,7 +46,9 @@ public class OverviewPage extends BasicModel {
         return this;
     }
 
-    public void finishButtonClick() {
+    public CompletePage finishButtonClick() {
+        Allure.step("Go the the Complete page");
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='finish'][@name='finish']"))).click();
+        return new CompletePage(getDriver());
     }
 }

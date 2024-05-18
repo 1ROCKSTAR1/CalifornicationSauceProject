@@ -1,6 +1,7 @@
 package Page;
 
 import Base.BasicModel;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,33 +12,48 @@ public class GoodsPage extends BasicModel {
         super(driver);
     }
     public void clickOnBikeLight() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bike Light')]"))).click();
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bike Light')]"))).click();
     }
-    public void clickOnBackPack() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"))).click();
+    public BackPackPage clickOnBackPack() {
+        Allure.step("Go to the Backpack's page");
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"))).click();
+        return new BackPackPage(getDriver());
     }
     public void clickOnBoltShirt() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bolt T-Shirt')]"))).click();
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bolt T-Shirt')]"))).click();
     }
     public void clickOnFleeceJacket() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]"))).click();
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]"))).click();
     }
     public void clickOnWhiteShirt() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]"))).click();
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]"))).click();
     }
     public void clickOnHoodyItem() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).click();
+        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).click();
     }
 
-    public final String bikeLightItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bike Light')]"))).getText();
+    public final String bikeLightItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bike Light')]"))).getText();
 
-    public final String backPackItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"))).getText();
-    public final String boltShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bolt T-Shirt')]"))).getText();
-    public final String fleeceJacketItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]"))).getText();
-    public final String whiteShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]"))).getText();
-    public final String hoodyItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).getText();
+    public final String backPackItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"))).getText();
+    public final String boltShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bolt T-Shirt')]"))).getText();
+    public final String fleeceJacketItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]"))).getText();
+    public final String whiteShirtItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]"))).getText();
+    public final String hoodyItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).getText();
 
-    public final WebElement afterLoginHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']")));
+    public final WebElement afterLoginHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//div[@class='app_logo']")));
     public String getAfterLoginHeaderString() {
 
         return afterLoginHeader.getText();

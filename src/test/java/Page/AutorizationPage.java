@@ -15,6 +15,7 @@ public class AutorizationPage extends BasicModel {
     public WebElement loginField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='user-name']")));
 
     public AutorizationPage inputLogin() {
+        Allure.step("Autorization");
         Allure.step("Заполнение поля логина");
         loginField.sendKeys("standard_user");
         return this;
@@ -24,9 +25,9 @@ public class AutorizationPage extends BasicModel {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']"))).sendKeys("secret_sauce");
         return this;
     }
-    public AutorizationPage clickSubmit() {
+    public GoodsPage clickSubmit() {
         Allure.step("Клик по клавише Login (Submit)");
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login-button']"))).click();
-        return this;
+        return new GoodsPage(getDriver());
     }
 }

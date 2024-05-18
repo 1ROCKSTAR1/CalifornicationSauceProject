@@ -106,42 +106,25 @@ public class BuyBackPackTest extends BaseTest {
     @Test(priority = 1, description = "Checking of creating an order. CHAINS")
     public void buyBackPack3() {
 
-        Allure.step("Autorization");
-        new AutorizationPage(getDriver())
-        .inputLogin()
-        .inputPassword()
-        .clickSubmit();
+        String finishBuyHeader = new AutorizationPage(getDriver())
+            .inputLogin()
+            .inputPassword()
+            .clickSubmit()
+            .clickOnBackPack()
+            .addBackPackToCart()
+            .backPackCartIcon()
+            .clickCheckoutButton()
+            .fillThefirstNameField()
+            .fillThelastNameField()
+            .fillThepostCodeField()
+            .clickOnsumbitButton()
+            .checkoutTitle()
+            .checkPaymentInfo()
+            .checkShipInfo()
+            .CheckPrice()
+            .finishButtonClick()
+            .getFinishBuyHeader();
 
-        Allure.step("Go to the Product's page");
-        new GoodsPage(getDriver())
-        .clickOnBackPack();
-
-        Allure.step("Go to the Backpack's page");
-        new BackPackPage(getDriver())
-        .addBackPackToCart()
-        .backPackCartIcon();
-
-        Allure.step("Go to the cart");
-        new YourCartPage(getDriver())
-        .checkoutButton();
-
-        Allure.step("Go the the buyer's info page + filling the fields");
-        new BuyInformationPage(getDriver())
-        .fillThefirstNameField()
-        .fillThelastNameField()
-        .fillThepostCodeField()
-        .clickOnsumbitButton();
-
-        Allure.step("Go to \"Overview page\" + some fields check");
-        new OverviewPage(getDriver())
-                .checkoutTitle()
-                .checkPaymentInfo()
-                .checkShipInfo()
-                .CheckPrice()
-                .finishButtonClick();
-
-        Allure.step("Go the the Complete page");
-        new CompletePage(getDriver())
-                .finishBuyHeaderCheck();
+        Assert.assertEquals(finishBuyHeader,"Thank you for order!");
     }
 }

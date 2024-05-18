@@ -1,6 +1,7 @@
 package Page;
 
 import Base.BasicModel;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,8 +34,9 @@ public class BuyInformationPage extends BasicModel {
     }
 
 
-    public BuyInformationPage clickOnsumbitButton() {
+    public OverviewPage clickOnsumbitButton() {
+        Allure.step("Go to \"Overview page\" + some fields check");
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='submit']"))).click();
-        return this;
+        return new OverviewPage(getDriver());
     }
 }

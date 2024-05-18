@@ -10,11 +10,12 @@ public class CompletePage extends BasicModel {
     public CompletePage(WebDriver driver) {
         super(driver);
     }
-    public String finishBuyHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@class='complete-header'][contains(text(),'Thank you for your order!')]"))).getText();
+    public String finishBuyHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//h2[@class='complete-header'][contains(text(),'Thank you for your order!')]"))).getText();
 
-    public CompletePage finishBuyHeaderCheck() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@class='complete-header'][contains(text(),'Thank you for your order!')]"))).getText();
-        Assert.assertEquals(finishBuyHeader,"Thank you for order!");
-        return this;
+    public String getFinishBuyHeader() {
+        return getWait2().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//h2[@class='complete-header'][contains(text(),'Thank you for your order!')]"))).getText();
+
     }
 }
