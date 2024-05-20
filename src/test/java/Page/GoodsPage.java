@@ -5,9 +5,14 @@ import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GoodsPage extends BasicModel {
+
+    @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]")
+    private WebElement backPackHeader;
+
     public GoodsPage(WebDriver driver) {
         super(driver);
     }
@@ -17,8 +22,7 @@ public class GoodsPage extends BasicModel {
     }
     public BackPackPage clickOnBackPack() {
         Allure.step("Go to the Backpack's page");
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"))).click();
+        getWait2().until(ExpectedConditions.visibilityOf(backPackHeader)).click();
         return new BackPackPage(getDriver());
     }
     public void clickOnBoltShirt() {
@@ -77,5 +81,7 @@ public class GoodsPage extends BasicModel {
     public void addToCardHoodyButtonClick() {
         getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@data-test,'red')]"))).click();
     }
+
+    public WebElement backPackItemHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]")));
 
 }

@@ -5,6 +5,8 @@ import Page.*;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+// ТРИ РАЗЛИЧНЫХ ПОДХОДА ДЛЯ АВТОТЕСТИРОВАНИЯ UI НА ПРИМЕРЕ Е2Е ТЕСТА
+// HERE ARE THREE DIFFERENT APPROACHES FOR UI AUTOTESTING USING THE EXAMPLE OF THE E2E TEST
 
 public class BuyBackPackTest extends BaseTest {
     @Epic(value = "E2E tests")
@@ -16,37 +18,37 @@ public class BuyBackPackTest extends BaseTest {
 
         Allure.step("Autorization");
         AutorizationPage loginPage = new AutorizationPage(getDriver());
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
+        loginPage.login1Field.sendKeys("standard_user");
+        loginPage.pass1Field.sendKeys("secret_sauce");
+        loginPage.submit1Button.click();
 
         Allure.step("Go to the Product's page");
         GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnBackPack();
+        goodsPage.backPackItemHeader.click();
 
         Allure.step("Go to the Backpack's page");
         BackPackPage backPackPage = new BackPackPage(getDriver());
-        backPackPage.addBackPackToCart.click();
-        backPackPage.backPackCartIcon.click();
+        backPackPage.backPackAddToCartButton.click();
+        backPackPage.goToCartFromBackPackPageIcon.click();
 
         Allure.step("Go to the cart");
         YourCartPage yourCartPage = new YourCartPage(getDriver());
-        yourCartPage.checkoutButton.click();
+        yourCartPage.checkout1Button.click();
 
         Allure.step("Go the the buyer's info page + filling the fields");
         BuyInformationPage buyInformationPage = new BuyInformationPage(getDriver());
-        buyInformationPage.firstNameField.sendKeys("Tom");
-        buyInformationPage.lastNameField.sendKeys("Harris");
-        buyInformationPage.postCodeField.sendKeys("123456");
-        buyInformationPage.sumbitButton.click();
+        buyInformationPage.firstName1Field.sendKeys("Tom");
+        buyInformationPage.lastName1Field.sendKeys("Harris");
+        buyInformationPage.postCode1Field.sendKeys("123456");
+        buyInformationPage.sumbit1Button.click();
 
         Allure.step("Go to \"Overview page\" + some fields check");
         OverviewPage overviewPage = new OverviewPage(getDriver());
-        Assert.assertEquals(overviewPage.checkoutTitle,"Checkout: Overview");
-        Assert.assertEquals(overviewPage.checkPaymentInfo,"Payment Information");
-        Assert.assertEquals(overviewPage.checkShipInfo,"Shipping Information");
-        Assert.assertEquals(overviewPage.CheckPrice,"Price Total");
-        overviewPage.finishButtonClick();
+        Assert.assertEquals(overviewPage.checkout1Title,"Checkout: Overview");
+        Assert.assertEquals(overviewPage.checkPayment1Info,"Payment Information");
+        Assert.assertEquals(overviewPage.checkShip1Info,"Shipping Information");
+        Assert.assertEquals(overviewPage.check1Price,"Price Total");
+        overviewPage.finish1Button.click();
 
         Allure.step("Go the the Complete page");
         CompletePage completePage = new CompletePage(getDriver());
@@ -72,26 +74,26 @@ public class BuyBackPackTest extends BaseTest {
 
         Allure.step("Go to the Backpack's page");
         BackPackPage backPackPage = new BackPackPage(getDriver());
-        backPackPage.addBackPackToCart.click();
-        backPackPage.backPackCartIcon.click();
+        backPackPage.addBackPackToCart();
+        backPackPage.clickBackPackCartIcon();
 
         Allure.step("Go to the cart");
         YourCartPage yourCartPage = new YourCartPage(getDriver());
-        yourCartPage.checkoutButton.click();
+        yourCartPage.clickCheckoutButton();
 
         Allure.step("Go the the buyer's info page + filling the fields");
         BuyInformationPage buyInformationPage = new BuyInformationPage(getDriver());
-        buyInformationPage.firstNameField.sendKeys("Tom");
-        buyInformationPage.lastNameField.sendKeys("Harris");
-        buyInformationPage.postCodeField.sendKeys("123456");
-        buyInformationPage.sumbitButton.click();
+        buyInformationPage.fillThefirstNameField();
+        buyInformationPage.fillThelastNameField();
+        buyInformationPage.fillThepostCodeField();
+        buyInformationPage.clickOnsumbitButton();
 
         Allure.step("Go to \"Overview page\" + some fields check");
         OverviewPage overviewPage = new OverviewPage(getDriver());
-        Assert.assertEquals(overviewPage.checkoutTitle,"Checkout: Overview");
-        Assert.assertEquals(overviewPage.checkPaymentInfo,"Payment Information");
-        Assert.assertEquals(overviewPage.checkShipInfo,"Shipping Information");
-        Assert.assertEquals(overviewPage.CheckPrice,"Price Total");
+        overviewPage.checkoutTitleCheck();
+        overviewPage.checkPaymentInfo();
+        overviewPage.checkShipInfo();
+        overviewPage.checkPrice();
         overviewPage.finishButtonClick();
 
         Allure.step("Go the the Complete page");
@@ -112,16 +114,16 @@ public class BuyBackPackTest extends BaseTest {
             .clickSubmit()
             .clickOnBackPack()
             .addBackPackToCart()
-            .backPackCartIcon()
+            .clickBackPackCartIcon()
             .clickCheckoutButton()
             .fillThefirstNameField()
             .fillThelastNameField()
             .fillThepostCodeField()
             .clickOnsumbitButton()
-            .checkoutTitle()
+            .checkoutTitleCheck()
             .checkPaymentInfo()
             .checkShipInfo()
-            .CheckPrice()
+            .checkPrice()
             .finishButtonClick()
             .getFinishBuyHeader();
 

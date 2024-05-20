@@ -1,6 +1,7 @@
 package Base;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -10,6 +11,8 @@ public abstract class BasicModel {
 
     public BasicModel(WebDriver driver) {
         this.driver = driver;
+
+        PageFactory.initElements(driver, this); // NECESSARY THING FOR USING @FINDBY
     }
     protected WebDriver getDriver() {
         return driver;

@@ -7,6 +7,7 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 // ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ НАЛИЧИЕ КАЖДОГО ТОВАРА НА СТРАНИЦЕ И КОРРЕКТНОСТЬ ЗАГОЛОВКА ТОВАРА
+// THESE TESTS CHECK EXISTING OF EVERY GOOD ON THE PAGE AND A GOOD'S HEADER CORRECTNESS
 
 public class AllGoodsPageTest extends BaseTest {
 

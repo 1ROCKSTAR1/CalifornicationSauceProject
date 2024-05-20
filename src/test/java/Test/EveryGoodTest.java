@@ -7,7 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class EveryGoodTest extends BaseTest {
-    // ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ СУЩЕСТВОВАНИЕ УНИКАЛЬНОЙ ТОВАРУ СТРАНИЦЫ А ТАК ЖЕ ПАРВИЛЬНОСТЬ ЗАГОЛОВКА И ОПИСАНИЯ
+    // ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ СУЩЕСТВОВАНИЕ УНИКАЛЬНОЙ ТОВАРУ СТРАНИЦЫ А ТАК ЖЕ ПРАВИЛЬНОСТЬ ЗАГОЛОВКА И ОПИСАНИЯ
+    // THESE TESTS CHECK AN ORIGINAL GOOD'S PAGE EXISTING AND CORRECTNESS OF HEADER AND DESCRIPTION
 
     @Epic(value = "Goods tests")
     @Feature(value = "Behavior + headers")
@@ -52,9 +53,10 @@ public class EveryGoodTest extends BaseTest {
         BackPackPage backPackPage = new BackPackPage(getDriver());
 
         Allure.step("Checking of item's title");
-        Assert.assertEquals(backPackPage.backPackItem, "Sauce Labs Backpack");
+        Assert.assertEquals(backPackPage.getBackPackItem(), "Sauce Labs Backpack");
+
         Allure.step("Checking of item's description");
-        Assert.assertEquals(backPackPage.backPackDesc, "Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.");
+        Assert.assertEquals(backPackPage.getBackPackDesc(), "Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.");
     }
 
     @Epic(value = "Goods tests")
@@ -77,6 +79,7 @@ public class EveryGoodTest extends BaseTest {
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(goodsPage.boltShirtItem, "Sauce Labs Bolt T-Shirt");
+
         Allure.step("Checking of item's description");
         Assert.assertEquals(boltShirtPage.boltShirtDesc, "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.");
     }
@@ -101,6 +104,7 @@ public class EveryGoodTest extends BaseTest {
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(fleeceJacketPage.fleeceJacketItem, "Sauce Labs Fleece Jacket");
+
         Allure.step("Checking of item's description");
         Assert.assertEquals(fleeceJacketPage.fleeceJacketDesc, "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.");
     }
@@ -125,6 +129,7 @@ public class EveryGoodTest extends BaseTest {
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(whiteShirtPage.whiteShirtItem, "Sauce Labs Onesie");
+
         Allure.step("Checking of item's description");
         Assert.assertEquals(whiteShirtPage.whiteShirtDesc, "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.");
     }
@@ -149,6 +154,7 @@ public class EveryGoodTest extends BaseTest {
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(hoodyPage.hoodyPageItem, "T-Shirt (Red)");
+
         Allure.step("Checking of item's description");
         Assert.assertEquals(hoodyPage.hoodyPageDesc,"This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.");
     }

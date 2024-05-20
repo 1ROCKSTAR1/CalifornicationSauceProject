@@ -11,7 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-// ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ АВТОРИЗАЦИЮ
+// ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ АВТОРИЗАЦИЮ 4-МЯ РАЗНЫМИ СПОСОБАМИ
+// THESE TESTS CHECK AUTORIZATION'S PROCESS BY FOUR DIFFERENT APPROACHES
 public class LoginPageTest extends BaseTest {
 
     String AfterLoginHeader = "Swag Labs";
@@ -77,5 +78,21 @@ public class LoginPageTest extends BaseTest {
                 .getAfterLoginHeaderString();
         Allure.step("Checking that main page is existed");
         Assert.assertEquals(actualHeader, expectedGoodsHeader);
+    }
+
+    @Epic(value = "Basic checking")
+    @Feature(value = "Autorization")
+    @Severity(value = SeverityLevel.NORMAL)
+    @Description("Проверка авторизации с использованием Page Object Model + TrueChains")
+    @Test(description = "Авторизация с TrueChains")
+    public void autorize3Test() {
+
+        String actualHeader = new AutorizationPage(getDriver())
+                .inputLogin()
+                .inputPassword()
+                .clickSubmit()
+                .getAfterLoginHeaderString();
+
+        Assert.assertEquals(actualHeader, "Swag Labs");
     }
 }

@@ -9,6 +9,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.util.NoSuchElementException;
 
+// ТЕСТЫ КОТОРЫЕ ПРОВЕРЯЮТ ПОЛЯ НА ВВОД РАЗЛИЧНЫХ ЗНАЧЕНИЙ
+// TESTS WHICH CHECK FIELDS FOR GETTING DIFFERENT VALUES
+
 
 public class ExperimenthalTest extends BaseTest {
 
