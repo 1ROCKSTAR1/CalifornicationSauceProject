@@ -43,14 +43,7 @@ public class ExperimenthalTest extends BaseTest {
     @Test(dataProvider = "data2", description = "Проверка поля NAME")
     public void theFirstDataProviderTest(String option) throws NoSuchElementException {
 
-        WebElement loginField = getDriver().findElement(By.xpath("//*[@id='user-name']"));
-        WebElement passField = getDriver().findElement(By.xpath("//*[@id='password']"));
-        WebElement submitButton = getDriver().findElement(By.xpath("//*[@id='login-button']"));
-
-        Allure.step("Autorization");
-        loginField.sendKeys("standard_user");
-        passField.sendKeys("secret_sauce");
-        submitButton.click();
+        Base.TestUtils.autorize(getWait2());
 
         Allure.step("Going to the backpack's page");
         WebElement backPackTitle = getDriver().findElement(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"));
@@ -102,14 +95,7 @@ public class ExperimenthalTest extends BaseTest {
     @Test(dataProvider = "data2", description = "Проверка поля LASTNAME")
     public void theFirstDataProviderTest2(String option) throws NoSuchElementException {
 
-        WebElement loginField = getDriver().findElement(By.xpath("//*[@id='user-name']"));
-        WebElement passField = getDriver().findElement(By.xpath("//*[@id='password']"));
-        WebElement submitButton = getDriver().findElement(By.xpath("//*[@id='login-button']"));
-
-        Allure.step("Autorization");
-        loginField.sendKeys("standard_user");
-        passField.sendKeys("secret_sauce");
-        submitButton.click();
+        Base.TestUtils.autorize(getWait2());
 
         Allure.step("Going to the backpack's page");
         WebElement backPackTitle = getDriver().findElement(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"));
@@ -162,14 +148,7 @@ public class ExperimenthalTest extends BaseTest {
     @Test(dataProvider = "data2", description = "Проверка поля POSTCODE")
     public void theFirstDataProviderTest3(String option) throws NoSuchElementException {
 
-        WebElement loginField = getDriver().findElement(By.xpath("//*[@id='user-name']"));
-        WebElement passField = getDriver().findElement(By.xpath("//*[@id='password']"));
-        WebElement submitButton = getDriver().findElement(By.xpath("//*[@id='login-button']"));
-
-        Allure.step("Autorization");
-        loginField.sendKeys("standard_user");
-        passField.sendKeys("secret_sauce");
-        submitButton.click();
+        Base.TestUtils.autorize(getWait2());
 
         Allure.step("Going to the backpack's page");
         WebElement backPackTitle = getDriver().findElement(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"));
