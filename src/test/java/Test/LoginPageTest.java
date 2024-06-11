@@ -5,7 +5,6 @@ import Page.AutorizationPage;
 import Base.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -24,16 +23,9 @@ public class LoginPageTest extends BaseTest {
     @Test(priority = 1, description = "Checking a basic autorization without POM.")
     public void enterTest() {
 
-    WebElement loginField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='user-name']")));
-    WebElement passField = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
-    WebElement submitButton = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login-button']")));
+        Base.TestUtils.autorize(getWait2());
 
-    Allure.step("Autorization");
-    loginField.sendKeys("standard_user");
-    passField.sendKeys("secret_sauce");
-    submitButton.click();
-
-    String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
+        String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 
     Allure.step("Checking that main page is existed");
     Assert.assertEquals(afterLoginHeaderString,AfterLoginHeader);
