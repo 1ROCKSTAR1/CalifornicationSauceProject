@@ -43,7 +43,7 @@ public class ExperimenthalTest extends BaseTest {
     @Test(dataProvider = "data2", description = "Проверка поля NAME")
     public void theFirstDataProviderTest(String option) throws NoSuchElementException {
 
-        Base.TestUtils.autorize(getWait2());
+        Base.TestUtils.autorize(this);
 
         Allure.step("Going to the backpack's page");
         WebElement backPackTitle = getDriver().findElement(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"));
@@ -95,7 +95,7 @@ public class ExperimenthalTest extends BaseTest {
     @Test(dataProvider = "data2", description = "Проверка поля LASTNAME")
     public void theFirstDataProviderTest2(String option) throws NoSuchElementException {
 
-        Base.TestUtils.autorize(getWait2());
+        Base.TestUtils.autorize(this);
 
         Allure.step("Going to the backpack's page");
         WebElement backPackTitle = getDriver().findElement(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"));
@@ -148,7 +148,7 @@ public class ExperimenthalTest extends BaseTest {
     @Test(dataProvider = "data2", description = "Проверка поля POSTCODE")
     public void theFirstDataProviderTest3(String option) throws NoSuchElementException {
 
-        Base.TestUtils.autorize(getWait2());
+        Base.TestUtils.autorize(this);
 
         Allure.step("Going to the backpack's page");
         WebElement backPackTitle = getDriver().findElement(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]"));
