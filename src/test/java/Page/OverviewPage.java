@@ -42,6 +42,11 @@ public class OverviewPage extends BasicModel {
     public String check1Price = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
             By.xpath("//div[contains(text(),'Price Total')]"))).getText();
 
+    public String getCheckoutTitle() {
+        return getWait2().until(ExpectedConditions.visibilityOf(checkoutTitle)).getText();
+    }
+
+
     public OverviewPage checkoutTitleCheck() {
         getWait2().until(ExpectedConditions.visibilityOf(checkoutTitle)).getText();
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
