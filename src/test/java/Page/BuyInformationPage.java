@@ -47,6 +47,19 @@ public class BuyInformationPage extends BasicModel {
         return this;
     }
 
+    public BuyInformationPage fillThefirstNameFieldDP(String s) {
+        getWait2().until(ExpectedConditions.visibilityOf(firstNameField)).sendKeys(s);
+        return this;
+    }
+    public BuyInformationPage fillThelastNameFieldDP(String s) {
+        getWait2().until(ExpectedConditions.visibilityOf(lastNameField)).sendKeys(s);
+        return this;
+    }
+    public BuyInformationPage fillThepostCodeFieldDP(String s) {
+        getWait2().until(ExpectedConditions.visibilityOf(postCodeField)).sendKeys(s);
+        return this;
+    }
+
 
     public OverviewPage clickOnsumbitButton() {
         Allure.step("Go to \"Overview page\" + some fields check");

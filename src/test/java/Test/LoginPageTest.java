@@ -23,7 +23,7 @@ public class LoginPageTest extends BaseTest {
     @Test(priority = 1, description = "Checking a basic autorization without POM.")
     public void enterTest() {
 
-        Base.TestUtils.autorize(getWait2());
+        Base.TestUtils.autorize(this);
 
         String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 
