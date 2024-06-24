@@ -46,7 +46,6 @@ public class OverviewPage extends BasicModel {
         return getWait2().until(ExpectedConditions.visibilityOf(checkoutTitle)).getText();
     }
 
-
     public OverviewPage checkoutTitleCheck() {
         getWait2().until(ExpectedConditions.visibilityOf(checkoutTitle)).getText();
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
