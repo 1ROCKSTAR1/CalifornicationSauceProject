@@ -17,16 +17,11 @@ public class EveryGoodTest extends BaseTest {
     @Test(priority = 1, description = "Bike Light Check Page")
     public void bikeLightPageTextTest() {
 
-        AutorizationPage loginPage = new AutorizationPage(getDriver());
-        Allure.step("Autorization");
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
-
-        GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnBikeLight();
-
-        BikeLightPage bikeLightPage = new BikeLightPage(getDriver());
+        BikeLightPage bikeLightPage = new AutorizationPage(getDriver())
+            .inputLogin()
+            .inputPassword()
+            .clickSubmit()
+            .clickOnBikeLight();
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(bikeLightPage.bikeLightItem, "Sauce Labs Bike Light");
@@ -41,16 +36,12 @@ public class EveryGoodTest extends BaseTest {
     @Description("Checks aviability of the Backpack + the correctness of the description of this product.")
     @Test(priority = 2, description = "Backpack Check Page")
     public void backPackPageTextTest() {
-        AutorizationPage loginPage = new AutorizationPage(getDriver());
-        Allure.step("Autorization");
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
 
-        GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnBackPack();
-
-        BackPackPage backPackPage = new BackPackPage(getDriver());
+        BackPackPage backPackPage = new AutorizationPage(getDriver())
+                .inputLogin()
+                .inputPassword()
+                .clickSubmit()
+                .clickOnBackPack();
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(backPackPage.getBackPackItem(), "Sauce Labs Backpack");
@@ -66,19 +57,14 @@ public class EveryGoodTest extends BaseTest {
     @Test(priority = 3, description = "T-Shirt Check Page")
     public void boltShirtPageTextTest() {
 
-        AutorizationPage loginPage = new AutorizationPage(getDriver());
-        Allure.step("Autorization");
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
-
-        GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnBoltShirt();
-
-        BoltShirtPage boltShirtPage = new BoltShirtPage(getDriver());
+        BoltShirtPage boltShirtPage = new AutorizationPage(getDriver())
+            .inputLogin()
+            .inputPassword()
+            .clickSubmit()
+            .clickOnBoltShirt();
 
         Allure.step("Checking of item's title");
-        Assert.assertEquals(goodsPage.boltShirtItem, "Sauce Labs Bolt T-Shirt");
+        Assert.assertEquals(boltShirtPage.boltShirtItem, "Sauce Labs Bolt T-Shirt");
 
         Allure.step("Checking of item's description");
         Assert.assertEquals(boltShirtPage.boltShirtDesc, "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.");
@@ -91,16 +77,11 @@ public class EveryGoodTest extends BaseTest {
     @Test(priority = 4, description = "Fleece Jacket Check Page")
     public void fleeceJacketPageTextTest() {
 
-        AutorizationPage loginPage = new AutorizationPage(getDriver());
-        Allure.step("Autorization");
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
-
-        GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnFleeceJacket();
-
-        FleeceJacketPage fleeceJacketPage = new FleeceJacketPage(getDriver());
+        FleeceJacketPage fleeceJacketPage = new AutorizationPage(getDriver())
+                .inputLogin()
+                .inputPassword()
+                .clickSubmit()
+                .clickOnFleeceJacket();
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(fleeceJacketPage.fleeceJacketItem, "Sauce Labs Fleece Jacket");
@@ -116,16 +97,11 @@ public class EveryGoodTest extends BaseTest {
     @Test(priority = 5, description = "Onesie Check Page")
     public void whiteShirtPageTextTest() {
 
-        AutorizationPage loginPage = new AutorizationPage(getDriver());
-        Allure.step("Autorization");
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
-
-        GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnWhiteShirt();
-
-        WhiteShirtPage whiteShirtPage = new WhiteShirtPage(getDriver());
+        WhiteShirtPage whiteShirtPage = new AutorizationPage(getDriver())
+                .inputLogin()
+                .inputPassword()
+                .clickSubmit()
+                .clickOnWhiteShirt();
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(whiteShirtPage.whiteShirtItem, "Sauce Labs Onesie");
@@ -141,16 +117,11 @@ public class EveryGoodTest extends BaseTest {
     @Test(priority = 6, description = "T-Shirt RED Check Page")
     public void hoodyPageTextTest() {
 
-        AutorizationPage loginPage = new AutorizationPage(getDriver());
-        Allure.step("Autorization");
-        loginPage.inputLogin();
-        loginPage.inputPassword();
-        loginPage.clickSubmit();
-
-        GoodsPage goodsPage = new GoodsPage(getDriver());
-        goodsPage.clickOnHoodyItem();
-
-        HoodyPage hoodyPage = new HoodyPage(getDriver());
+        HoodyPage hoodyPage = new AutorizationPage(getDriver())
+                .inputLogin()
+                .inputPassword()
+                .clickSubmit()
+                .clickOnHoody();
 
         Allure.step("Checking of item's title");
         Assert.assertEquals(hoodyPage.hoodyPageItem, "T-Shirt (Red)");

@@ -13,33 +13,59 @@ public class GoodsPage extends BasicModel {
     @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]")
     private WebElement backPackHeader;
 
+    @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bike Light')]")
+    private WebElement bikeLightHeader;
+
+    @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bolt T-Shirt')]")
+    private WebElement boltShirtHeader;
+
+    @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]")
+    private WebElement fleeceJacketHeader;
+
+    @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]")
+    private WebElement whiteShirtHeader;
+
+    @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]")
+    private WebElement HoodyHeader;
+
     public GoodsPage(WebDriver driver) {
         super(driver);
     }
-    public void clickOnBikeLight() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bike Light')]"))).click();
+
+    public BikeLightPage clickOnBikeLight() {
+        Allure.step("Go to the Bikelight page");
+        getWait2().until(ExpectedConditions.visibilityOf(bikeLightHeader)).click();
+        return new BikeLightPage(getDriver());
     }
+
     public BackPackPage clickOnBackPack() {
         Allure.step("Go to the Backpack's page");
         getWait2().until(ExpectedConditions.visibilityOf(backPackHeader)).click();
         return new BackPackPage(getDriver());
     }
-    public void clickOnBoltShirt() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Bolt T-Shirt')]"))).click();
+
+    public BoltShirtPage clickOnBoltShirt() {
+        Allure.step("Go to the BoltShirt's page");
+        getWait2().until(ExpectedConditions.visibilityOf(boltShirtHeader)).click();
+        return new BoltShirtPage(getDriver());
     }
-    public void clickOnFleeceJacket() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Fleece Jacket')]"))).click();
+
+    public FleeceJacketPage clickOnFleeceJacket() {
+        Allure.step("Go to the FleeceJacket's page");
+        getWait2().until(ExpectedConditions.visibilityOf(fleeceJacketHeader)).click();
+        return new FleeceJacketPage(getDriver());
     }
-    public void clickOnWhiteShirt() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Onesie')]"))).click();
+
+    public WhiteShirtPage clickOnWhiteShirt() {
+        Allure.step("Go to the White shirt's page");
+        getWait2().until(ExpectedConditions.visibilityOf(fleeceJacketHeader)).click();
+        return new WhiteShirtPage(getDriver());
     }
-    public void clickOnHoodyItem() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'T-Shirt (Red)')]"))).click();
+
+    public HoodyPage clickOnHoody() {
+        Allure.step("Go to the Hoody's page");
+        getWait2().until(ExpectedConditions.visibilityOf(HoodyHeader)).click();
+        return new HoodyPage(getDriver());
     }
 
     public final String bikeLightItem = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
@@ -58,28 +84,10 @@ public class GoodsPage extends BasicModel {
 
     public final WebElement afterLoginHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(
             By.xpath("//div[@class='app_logo']")));
+
     public String getAfterLoginHeaderString() {
 
         return afterLoginHeader.getText();
-    }
-
-    public void addToCardBackPackButtonClick() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-backpack']"))).click();
-    }
-    public void addToCardBikeLightButtonClick() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-bike-light']"))).click();
-    }
-    public void addToCardBoltShirtButtonClick() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-bolt-t-shirt']"))).click();
-    }
-    public void addToCardFleeceJacketButtonClick() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-fleece-jacket']"))).click();
-    }
-    public void addToCardWhiteShirtButtonClick() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-test='add-to-cart-sauce-labs-onesie']"))).click();
-    }
-    public void addToCardHoodyButtonClick() {
-        getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@data-test,'red')]"))).click();
     }
 
     public WebElement backPackItemHeader = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]")));
