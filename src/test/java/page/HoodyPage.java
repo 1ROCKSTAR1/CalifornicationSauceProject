@@ -1,11 +1,11 @@
-package Page;
+package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class HoodyPage extends BasicModel {
+public class HoodyPage extends BasePage {
     public HoodyPage(WebDriver driver) {
         super(driver);
     }

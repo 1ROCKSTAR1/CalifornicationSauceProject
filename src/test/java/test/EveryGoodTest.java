@@ -1,7 +1,7 @@
-package Test;
+package test;
 
-import Page.*;
-import Base.BaseTest;
+import page.*;
+import base.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;

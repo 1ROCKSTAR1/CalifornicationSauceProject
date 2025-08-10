@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All test Suite">
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-        <listener class-name="Base.TestListener"/>
+        <listener class-name="base.TestListener"/>
     </listeners>
 
         <test name="MainPageGoodsTests">
 <classes>
-            <class name="Test.AllGoodsPageTest">
+            <class name="test.AllGoodsPageTest">
                 <methods>
                     <include name="bikeLightHeaderTextTest"/>
                     <include name="backPackHeaderTextTest"/>
@@ -23,7 +23,7 @@
 
     <test name="MainPageEveryGoodTests">
         <classes>
-            <class name="Test.EveryGoodTest">
+            <class name="test.EveryGoodTest">
                 <methods>
                     <include name="bikeLightPageTextTest"/>
                     <include name="backPackPageTextTest"/>
@@ -38,7 +38,7 @@
 
     <test name="DataProviderTests">
         <classes>
-            <class name="Test.ExperimenthalTest">
+            <class name="test.ExperimenthalTest">
                 <methods>
                     <include name="theFirstDataProviderTest"/>
                     <include name="theFirstDataProviderTest2"/>
@@ -50,7 +50,7 @@
 
     <test name="LoginTests">
         <classes>
-            <class name="Test.LoginPageTest">
+            <class name="test.LoginPageTest">
                 <methods>
                     <include name="enterTest"/>
                     <include name="enter2Test"/>
@@ -63,7 +63,7 @@
 
     <test name="E2E">
         <classes>
-            <class name="TestE2E.BuyBackPackTest">
+            <class name="testE2E.BuyBackPackTest">
                 <methods>
                     <include name="buyBackPack"/>
                     <include name="buyBackPack2"/>

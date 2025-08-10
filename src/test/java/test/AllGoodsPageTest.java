@@ -1,8 +1,8 @@
-package Test;
+package test;
 
-import Base.BaseTest;
-import Page.GoodsPage;
-import Page.AutorizationPage;
+import base.BaseTest;
+import page.GoodsPage;
+import page.AutorizationPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;

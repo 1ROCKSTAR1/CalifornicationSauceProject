@@ -1,7 +1,7 @@
-package Test;
+package test;
 
-import Base.BaseTest;
-import Page.AutorizationPage;
+import base.BaseTest;
+import page.AutorizationPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -31,7 +31,6 @@ public class ExperimenthalTest extends BaseTest {
             };
     }
 
-    //@Ignore
     @Epic(value = "Проверки полей")
     @Feature(value = "Данные покупателя")
     @Story(value = "Проверки полей страницы заполнения данных юзера")
@@ -81,7 +80,6 @@ public class ExperimenthalTest extends BaseTest {
 
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
     }
-
 
     @Epic(value = "Проверки полей")
     @Feature(value = "Данные покупателя")

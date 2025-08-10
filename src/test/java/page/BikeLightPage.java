@@ -1,11 +1,12 @@
-package Page;
+package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class BikeLightPage extends BasicModel {
+public class BikeLightPage extends BasePage {
+
     public BikeLightPage(WebDriver driver) {
         super(driver);
     }
