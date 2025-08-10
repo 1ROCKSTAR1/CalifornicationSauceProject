@@ -1,6 +1,6 @@
-package Page;
+package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-public class OverviewPage extends BasicModel {
+public class OverviewPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='title'][contains(text(),'Checkout: Overview')]")
     private WebElement checkoutTitle;

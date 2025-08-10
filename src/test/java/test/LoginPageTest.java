@@ -1,8 +1,8 @@
-package Test;
+package test;
 
-import Page.GoodsPage;
-import Page.AutorizationPage;
-import Base.BaseTest;
+import page.GoodsPage;
+import page.AutorizationPage;
+import base.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,7 +23,7 @@ public class LoginPageTest extends BaseTest {
     @Test(priority = 1, description = "Checking a basic autorization without POM.")
     public void enterTest() {
 
-        Base.TestUtils.autorize(this);
+        base.TestUtils.autorize(this);
 
         String afterLoginHeaderString = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='app_logo']"))).getText();
 

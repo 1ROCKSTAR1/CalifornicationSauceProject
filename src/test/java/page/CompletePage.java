@@ -1,12 +1,11 @@
-package Page;
+package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
-public class CompletePage extends BasicModel {
+public class CompletePage extends BasePage {
     public CompletePage(WebDriver driver) {
         super(driver);
     }

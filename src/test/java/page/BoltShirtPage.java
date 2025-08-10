@@ -1,11 +1,11 @@
-package Page;
+package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class BoltShirtPage extends BasicModel {
+public class BoltShirtPage extends BasePage {
     public BoltShirtPage(WebDriver driver) {
         super(driver);
     }

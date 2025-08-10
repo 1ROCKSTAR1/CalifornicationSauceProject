@@ -1,6 +1,6 @@
-package Page;
+package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class GoodsPage extends BasicModel {
+public class GoodsPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(@class,'inventory_item_name')][contains(text(),'Sauce Labs Backpack')]")
     private WebElement backPackHeader;
