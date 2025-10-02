@@ -13,7 +13,7 @@ public class BuyBackPackTest extends BaseTest {
     @Severity(value = SeverityLevel.NORMAL)
     @Description("Buying an item. From an autorization to an order. NEGATIVE.")
     @Test(priority = 1, description = "Checking of creating an order. CHAINS")
-    public void buyBackPack3() {
+    public void buyBackPack() {
 
         String finishBuyHeader = new AutorizationPage(getDriver())
             .inputLogin()
@@ -27,7 +27,7 @@ public class BuyBackPackTest extends BaseTest {
             .fillThelastNameField()
             .fillThepostCodeField()
             .clickOnsumbitButton()
-            .checkoutTitleCheck()
+            .checkoutHeaderStringCheck()
             .checkPaymentInfo()
             .checkShipInfo()
             .checkPrice()
