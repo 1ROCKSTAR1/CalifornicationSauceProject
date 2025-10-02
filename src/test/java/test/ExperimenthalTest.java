@@ -51,7 +51,7 @@ public class ExperimenthalTest extends BaseTest {
                 .fillThelastNameField()
                 .fillThepostCodeField()
                 .clickOnsumbitButton()
-                .getCheckoutTitle();
+                .getCheckoutHeaderPresence();
 
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
      }
@@ -76,7 +76,7 @@ public class ExperimenthalTest extends BaseTest {
                 .fillThelastNameFieldDP(option)
                 .fillThepostCodeField()
                 .clickOnsumbitButton()
-                .getCheckoutTitle();
+                .getCheckoutHeaderPresence();
 
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
     }
@@ -101,7 +101,7 @@ public class ExperimenthalTest extends BaseTest {
                 .fillThelastNameField()
                 .fillThepostCodeFieldDP(option)
                 .clickOnsumbitButton()
-                .getCheckoutTitle();
+                .getCheckoutHeaderPresence();
 
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
     }
