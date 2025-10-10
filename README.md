@@ -2,12 +2,12 @@
 
 <div align="center">
 
-![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-![TestNG](https://img.shields.io/badge/TestNG-%23FF6A33.svg?style=for-the-badge)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/Java.svg" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/selenium.png" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/testNG.png" width="96" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/maven.png" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/Intelij_IDEA.svg" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/Allure_Report.svg" width="56" height="56">
 
 </div>
 
