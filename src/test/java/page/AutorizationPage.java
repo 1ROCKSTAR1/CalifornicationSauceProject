@@ -2,7 +2,6 @@ package page;
 
 import base.BasePage;
 import io.qameta.allure.Allure;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,8 +38,4 @@ public class AutorizationPage extends BasePage {
         getWait2().until(ExpectedConditions.visibilityOf(submitButton)).click();
         return new GoodsPage(getDriver());
     }
-
-    public WebElement login1Field = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='user-name']")));
-    public WebElement pass1Field = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='password']")));
-    public WebElement submit1Button = getWait2().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login-button']")));
 }
