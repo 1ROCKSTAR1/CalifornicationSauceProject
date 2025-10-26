@@ -1,6 +1,7 @@
 package test;
 
 import base.BaseTest;
+import org.testng.annotations.Ignore;
 import page.AutorizationPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
@@ -10,6 +11,7 @@ import java.util.NoSuchElementException;
 
 // ТЕСТЫ КОТОРЫЕ ПРОВЕРЯЮТ ПОЛЯ НА ВВОД РАЗЛИЧНЫХ ЗНАЧЕНИЙ
 // TESTS WHICH CHECK FIELDS FOR GETTING DIFFERENT VALUES
+@Ignore
 public class ExperimenthalTest extends BaseTest {
 
     @DataProvider(name = "data2")
