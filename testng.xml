@@ -3,7 +3,6 @@
 <suite name="All test Suite">
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-        <listener class-name="base.TestListener"/>
     </listeners>
 
         <test name="MainPageGoodsTests">
