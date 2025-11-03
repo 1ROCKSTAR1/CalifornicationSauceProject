@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenoid Test Suite" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Selenoid E2E Tests">
+        <classes>
+            <class name="selenoid_test.SelTest">
+                <methods>
+                    <include name="buyBackPack"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Можно добавить другие selenoid тесты позже -->
+</suite>
