@@ -29,7 +29,8 @@ public class SelTest {
         selenoidOptions.put("enableVNC", true);
         selenoidOptions.put("enableVideo", true);
         selenoidOptions.put("enableLog", true);
-        options.setCapability("selenoid:options", selenoidOptions);
+        selenoidOptions.put("sessionTimeout", "10m"); // Увеличиваем таймаут сессии
+        selenoidOptions.put("timeout", "2m"); // Увеличиваем таймаут запуска
 
         // Connect to Selenoid
         driver = new RemoteWebDriver(new URL(
