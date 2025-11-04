@@ -32,10 +32,9 @@ public class SelTest {
         options.setCapability("selenoid:options", selenoidOptions);
 
         // Connect to Selenoid
-        driver = new RemoteWebDriver(
-                new URL("http://localhost:4444/wd/hub"),
-                options
-        );
+        driver = new RemoteWebDriver(new URL(
+                "http://host.docker.internal:4444/wd/hub"),
+                options);
     }
 
     @Epic(value = "E2E tests")
