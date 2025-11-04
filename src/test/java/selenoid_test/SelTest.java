@@ -25,12 +25,21 @@ public class SelTest {
         options.setBrowserVersion("latest");
 
         // Selenoid capabilities
+        // Добавим аргументы для стабильной работы в контейнере
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        //options.addArguments("--headless"); // Можно попробовать headless для скорости
+        options.addArguments("--window-size=1920,1080");
+
+        // Вернем базовые selenoid options
         Map<String, Object> selenoidOptions = new HashMap<>();
-        selenoidOptions.put("enableVNC", true);
-        selenoidOptions.put("enableVideo", true);
+        selenoidOptions.put("enableVNC", false);
+        selenoidOptions.put("enableVideo", false);
         selenoidOptions.put("enableLog", true);
-        selenoidOptions.put("sessionTimeout", "10m"); // Увеличиваем таймаут сессии
-        selenoidOptions.put("timeout", "2m"); // Увеличиваем таймаут запуска
+        selenoidOptions.put("sessionTimeout", "5m");
+
+        options.setCapability("selenoid:options", selenoidOptions);
 
         // Connect to Selenoid
         driver = new RemoteWebDriver(new URL(
