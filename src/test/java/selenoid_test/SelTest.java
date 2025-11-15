@@ -22,7 +22,7 @@ public class SelTest {
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
-        options.setBrowserVersion("120.0");
+        options.setBrowserVersion("127.0");
 
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
