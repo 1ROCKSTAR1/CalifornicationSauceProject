@@ -12,6 +12,7 @@ import page.AutorizationPage;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,6 +44,9 @@ public class SelTest {
         driver = new RemoteWebDriver(new URL(
                 "http://host.docker.internal:4444/wd/hub"),
                 options);
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }
 
     @Epic(value = "E2E tests")
