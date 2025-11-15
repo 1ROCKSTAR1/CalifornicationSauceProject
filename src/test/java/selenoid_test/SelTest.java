@@ -22,17 +22,15 @@ public class SelTest {
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         ChromeOptions options = new ChromeOptions();
-        options.setBrowserVersion("latest");
+        options.setBrowserVersion("120.0");
 
-        // Selenoid capabilities
-        // Добавим аргументы для стабильной работы в контейнере
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
-        //options.addArguments("--headless"); // Можно попробовать headless для скорости
+
         options.addArguments("--window-size=1920,1080");
 
-        // Вернем базовые selenoid options
+
         Map<String, Object> selenoidOptions = new HashMap<>();
         selenoidOptions.put("enableVNC", false);
         selenoidOptions.put("enableVideo", false);
