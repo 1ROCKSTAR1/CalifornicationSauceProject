@@ -26,18 +26,10 @@ public class SelTest {
         FirefoxOptions options = new FirefoxOptions();
         options.setBrowserVersion("latest");
 
+        // Минимальные аргументы
         options.addArguments("--headless");
-        options.addArguments("--width=1920");
-        options.addArguments("--height=1080");
 
-        Map<String, Object> selenoidOptions = new HashMap<>();
-        selenoidOptions.put("enableVNC", false);
-        selenoidOptions.put("enableVideo", false);
-        selenoidOptions.put("enableLog", true);
-        selenoidOptions.put("sessionTimeout", "5m");
-
-        options.setCapability("selenoid:options", selenoidOptions);
-
+        // Без selenoid options вообще
         driver = new RemoteWebDriver(
                 new URL("http://host.docker.internal:4444/wd/hub"),
                 options
