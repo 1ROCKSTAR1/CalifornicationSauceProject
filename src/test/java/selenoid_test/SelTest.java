@@ -3,6 +3,7 @@ package selenoid_test;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -22,15 +23,12 @@ public class SelTest {
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        ChromeOptions options = new ChromeOptions();
-        options.setBrowserVersion("127.0");
+        FirefoxOptions options = new FirefoxOptions();
+        options.setBrowserVersion("latest");
 
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-gpu");
-
-        options.addArguments("--window-size=1920,1080");
-
+        options.addArguments("--headless");
+        options.addArguments("--width=1920");
+        options.addArguments("--height=1080");
 
         Map<String, Object> selenoidOptions = new HashMap<>();
         selenoidOptions.put("enableVNC", false);
@@ -40,10 +38,10 @@ public class SelTest {
 
         options.setCapability("selenoid:options", selenoidOptions);
 
-        // Connect to Selenoid
-        driver = new RemoteWebDriver(new URL(
-                "http://host.docker.internal:4444/wd/hub"),
-                options);
+        driver = new RemoteWebDriver(
+                new URL("http://host.docker.internal:4444/wd/hub"),
+                options
+        );
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
