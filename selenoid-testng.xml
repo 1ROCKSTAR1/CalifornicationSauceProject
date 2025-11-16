@@ -10,6 +10,7 @@
             <class name="selenoid_test.SelTest">
                 <methods>
                     <include name="buyBackPack"/>
+                    <include name="buyBackPackTest"/>
                 </methods>
             </class>
         </classes>
