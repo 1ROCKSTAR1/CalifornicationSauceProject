@@ -25,18 +25,25 @@ public class SelTest {
     public void setUp() throws MalformedURLException {
         FirefoxOptions options = new FirefoxOptions();
         options.setBrowserVersion("latest");
-
-        // Минимальные аргументы
         options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--window-size=1920,1080");
 
-        // Без selenoid options вообще
+        // Добавляем Selenoid options
+        Map<String, Object> selenoidOptions = new HashMap<>();
+        selenoidOptions.put("enableVNC", false);
+        selenoidOptions.put("enableVideo", false);
+        selenoidOptions.put("enableLog", true);
+        options.setCapability("selenoid:options", selenoidOptions);
+
         driver = new RemoteWebDriver(
-                new URL("http://host.docker.internal:4444/wd/hub"),
+                new URL("http://selenoid:4444/wd/hub"),
                 options
         );
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(45));
     }
 
     @Epic(value = "E2E tests")
