@@ -1,11 +1,14 @@
 package selenoid_test;
 
 import io.qameta.allure.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -70,9 +73,23 @@ public class SelTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    protected void tearDown(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            takeScreenshotOnFailure(result.getName());
+        }
         if (driver != null) {
             driver.quit();
+        }
+    }
+
+    public void takeScreenshotOnFailure(String testName) {
+        try {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+            Allure.getLifecycle().addAttachment(testName, "image/png", ".png", screenshot);
+            System.out.println("✅ Screenshot taken for: " + testName);
+        } catch (Exception e) {
+            System.err.println("❌ Failed to take screenshot: " + e.getMessage());
         }
     }
 }
