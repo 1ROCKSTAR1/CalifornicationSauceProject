@@ -13,6 +13,8 @@ import org.testng.annotations.BeforeMethod;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SelBaseTest {
 
@@ -36,6 +38,12 @@ public class SelBaseTest {
                 new URL("http://selenoid:4444/wd/hub"),
                 options
         );
+
+        Map<String, Object> selenoidOptions = new HashMap<>();
+        selenoidOptions.put("enableVNC", true);
+        selenoidOptions.put("enableVideo", false);
+        selenoidOptions.put("enableLog", true);
+        options.setCapability("selenoid:options", selenoidOptions);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(45));
