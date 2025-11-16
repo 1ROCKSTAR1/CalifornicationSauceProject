@@ -8,12 +8,16 @@ import page.AutorizationPage;
 
 public class SelTest extends SelBaseTest {
 
+    private static final String BASE_URL = "https://www.saucedemo.com/";
+
     @Epic(value = "E2E tests")
     @Feature(value = "Buying an item")
     @Severity(value = SeverityLevel.NORMAL)
     @Description("Buying an item. From an autorization to an order. NEGATIVE.")
     @Test(priority = 1, description = "Checking of creating an order. CHAINS")
     public void buyBackPack() {
+
+        getDriver().get(BASE_URL);
 
         String finishBuyHeader = new AutorizationPage(getDriver())
                 .inputLogin()
