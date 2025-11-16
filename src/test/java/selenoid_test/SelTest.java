@@ -24,18 +24,12 @@ public class SelTest {
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         FirefoxOptions options = new FirefoxOptions();
-        options.setBrowserVersion("latest");
+
+        options.setBrowserVersion("120.0");
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--window-size=1920,1080");
-
-        // Добавляем Selenoid options
-        Map<String, Object> selenoidOptions = new HashMap<>();
-        selenoidOptions.put("enableVNC", false);
-        selenoidOptions.put("enableVideo", false);
-        selenoidOptions.put("enableLog", true);
-        options.setCapability("selenoid:options", selenoidOptions);
 
         driver = new RemoteWebDriver(
                 new URL("http://selenoid:4444/wd/hub"),
