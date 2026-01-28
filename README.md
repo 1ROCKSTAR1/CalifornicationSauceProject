@@ -3,11 +3,12 @@
 <div align="center">
 
 <img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/Java.svg" width="56" height="56">
-<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/selenium.png" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/selenium.png" width="56" height="54">
 <img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/testNG.png" width="96" height="56">
-<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/maven.png" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/maven.png" width="56" height="54">
 <img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/Intelij_IDEA.svg" width="56" height="56">
 <img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/Allure_Report.svg" width="56" height="56">
+<img src="https://github.com/1ROCKSTAR1/source/blob/main/icons/selenoid.png" width="60" height="50">
 
 </div>
 
