@@ -6,11 +6,12 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+@Epic(value = "E2E tests")
+@Feature(value = "Buying an item")
+@Severity(value = SeverityLevel.NORMAL)
 public class BuyBackPackTest extends BaseTest {
 
-    @Epic(value = "E2E tests")
-    @Feature(value = "Buying an item")
-    @Severity(value = SeverityLevel.NORMAL)
+
     @Description("Buying an item. From an autorization to an order. NEGATIVE.")
     @Test(priority = 1, description = "Checking of creating an order. CHAINS")
     public void buyBackPack() {

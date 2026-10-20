@@ -9,16 +9,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 // ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ АВТОРИЗАЦИЮ 4-МЯ РАЗНЫМИ СПОСОБАМИ
 // THESE TESTS CHECK AUTORIZATION'S PROCESS BY FOUR DIFFERENT APPROACHES
+@Epic(value = "Basic checking")
+@Feature(value = "Autorization")
+@Severity(value = SeverityLevel.NORMAL)
 public class LoginPageTest extends BaseTest {
 
     String AfterLoginHeader = "Swag Labs";
 
-    @Epic(value = "Basic checking")
-    @Feature(value = "Autorization")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks a basic autorization without PageObject.")
     @Test(priority = 1, description = "Checking a basic autorization without POM.")
     public void enterTest() {
@@ -31,9 +30,6 @@ public class LoginPageTest extends BaseTest {
     Assert.assertEquals(afterLoginHeaderString,AfterLoginHeader);
     }
 
-    @Epic(value = "Basic checking")
-    @Feature(value = "Autorization")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks a basic autorization with PageObject model")
     @Test(priority = 2, description = "Checking a basic autorization with POM.")
     public void enter2Test() {
@@ -51,9 +47,6 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(goodsPage.getAfterLoginHeaderString(),AfterLoginHeader);
     }
 
-    @Epic(value = "Basic checking")
-    @Feature(value = "Autorization")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Проверка авторизации с использованием Page Object Model + Chains")
     @Test(description = "Авторизация с Chains")
     public void autorize2Test() {
@@ -72,9 +65,6 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(actualHeader, expectedGoodsHeader);
     }
 
-    @Epic(value = "Basic checking")
-    @Feature(value = "Autorization")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Проверка авторизации с использованием Page Object Model + TrueChains")
     @Test(description = "Авторизация с TrueChains")
     public void autorize3Test() {

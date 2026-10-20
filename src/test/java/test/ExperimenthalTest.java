@@ -12,6 +12,10 @@ import java.util.NoSuchElementException;
 // ТЕСТЫ КОТОРЫЕ ПРОВЕРЯЮТ ПОЛЯ НА ВВОД РАЗЛИЧНЫХ ЗНАЧЕНИЙ
 // TESTS WHICH CHECK FIELDS FOR GETTING DIFFERENT VALUES
 @Ignore
+@Epic(value = "Проверки полей")
+@Feature(value = "Данные покупателя")
+@Story(value = "Проверки полей страницы заполнения данных юзера")
+@Severity(value = SeverityLevel.NORMAL)
 public class ExperimenthalTest extends BaseTest {
 
     @DataProvider(name = "data2")
@@ -33,10 +37,6 @@ public class ExperimenthalTest extends BaseTest {
             };
     }
 
-    @Epic(value = "Проверки полей")
-    @Feature(value = "Данные покупателя")
-    @Story(value = "Проверки полей страницы заполнения данных юзера")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description(value = "Проверка поля NAME на граничные значения и спецсимволы ....")
     @Test(dataProvider = "data2", description = "Проверка поля NAME")
     public void theFirstDataProviderTest(String option) throws NoSuchElementException {
@@ -58,10 +58,6 @@ public class ExperimenthalTest extends BaseTest {
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
      }
 
-    @Epic(value = "Проверки полей")
-    @Feature(value = "Данные покупателя")
-    @Story(value = "Проверки полей страницы заполнения данных юзера")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description(value = "Проверка поля LASTNAME на граничные значения и спецсимволы ....")
     @Test(dataProvider = "data2", description = "Проверка поля LASTNAME")
     public void theFirstDataProviderTest2(String option) throws NoSuchElementException {
@@ -83,10 +79,6 @@ public class ExperimenthalTest extends BaseTest {
         Assert.assertEquals(checkoutTitle,"Checkout: Overview");
     }
 
-    @Epic(value = "Проверки полей")
-    @Feature(value = "Данные покупателя")
-    @Story(value = "Проверки полей страницы заполнения данных юзера")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description(value = "Проверка поля POSTCODE на граничные значения и спецсимволы ....")
     @Test(dataProvider = "data2", description = "Проверка поля POSTCODE")
     public void theFirstDataProviderTest3(String option) throws NoSuchElementException {

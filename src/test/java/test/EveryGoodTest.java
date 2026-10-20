@@ -6,13 +6,13 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+@Epic(value = "Goods tests")
+@Feature(value = "Behavior + headers")
+@Severity(value = SeverityLevel.NORMAL)
 public class EveryGoodTest extends BaseTest {
     // ДАННЫЕ ТЕСТЫ ПРОВЕРЯЮТ СУЩЕСТВОВАНИЕ УНИКАЛЬНОЙ ТОВАРУ СТРАНИЦЫ А ТАК ЖЕ ПРАВИЛЬНОСТЬ ЗАГОЛОВКА И ОПИСАНИЯ
     // THESE TESTS CHECK AN ORIGINAL GOOD'S PAGE EXISTING AND CORRECTNESS OF HEADER AND DESCRIPTION
 
-    @Epic(value = "Goods tests")
-    @Feature(value = "Behavior + headers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks aviability of the Bike Light Page + the correctness of the description of this product.")
     @Test(priority = 1, description = "Bike Light Check Page")
     public void bikeLightPageTextTest() {
@@ -30,9 +30,6 @@ public class EveryGoodTest extends BaseTest {
         Assert.assertEquals(bikeLightPage.bikeLightDesc, "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.");
     }
 
-    @Epic(value = "Goods tests")
-    @Feature(value = "Behavior + headers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks aviability of the Backpack + the correctness of the description of this product.")
     @Test(priority = 2, description = "Backpack Check Page")
     public void backPackPageTextTest() {
@@ -50,9 +47,6 @@ public class EveryGoodTest extends BaseTest {
         Assert.assertEquals(backPackPage.getBackPackDesc(), "Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.");
     }
 
-    @Epic(value = "Goods tests")
-    @Feature(value = "Behavior + headers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks aviability of the T-Shirt + the correctness of the description of this product.")
     @Test(priority = 3, description = "T-Shirt Check Page")
     public void boltShirtPageTextTest() {
@@ -70,9 +64,6 @@ public class EveryGoodTest extends BaseTest {
         Assert.assertEquals(boltShirtPage.boltShirtDesc, "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.");
     }
 
-    @Epic(value = "Goods tests")
-    @Feature(value = "Behavior + headers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks aviability of the Fleece jacket + the correctness of the description of this product.")
     @Test(priority = 4, description = "Fleece Jacket Check Page")
     public void fleeceJacketPageTextTest() {
@@ -90,9 +81,6 @@ public class EveryGoodTest extends BaseTest {
         Assert.assertEquals(fleeceJacketPage.fleeceJacketDesc, "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.");
     }
 
-    @Epic(value = "Goods tests")
-    @Feature(value = "Behavior + headers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks aviability of the Onesie + the correctness of the description of this product.")
     @Test(priority = 5, description = "Onesie Check Page")
     public void whiteShirtPageTextTest() {
@@ -110,9 +98,6 @@ public class EveryGoodTest extends BaseTest {
         Assert.assertEquals(whiteShirtPage.whiteShirtDesc, "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.");
     }
 
-    @Epic(value = "Goods tests")
-    @Feature(value = "Behavior + headers")
-    @Severity(value = SeverityLevel.NORMAL)
     @Description("Checks aviability of the T-Shirt RED + the correctness of the description of this product.")
     @Test(priority = 6, description = "T-Shirt RED Check Page")
     public void hoodyPageTextTest() {
